@@ -1,4 +1,5 @@
 !function () {
+	console.log('Prism', Prism)
 	let duration = 50
 	
 	$('.actions').on('click', 'button', (e) => {
@@ -24,7 +25,7 @@
 		let n = 0
 		setTimeout(function run() {
 			n += 1
-			container.innerHTML = code.substring(0, n)
+			container.innerHTML = Prism.highlight(code.substring(0, n), Prism.languages.css)
 			styleTag.innerHTML = code.substring(0, n)
 			container.scrollTop = container.scrollHeight
 			if (n < code.length) {
@@ -78,7 +79,7 @@
   border: 2px solid #000;
 }
 /*
- * 眼睛里面的珠子
+ * 紧接着画眼珠子
  */	
 .eye::before {
   content: '';
