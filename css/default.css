@@ -20,13 +20,13 @@ body {
 
 .code-wrapper {
   flex: 1;
-	height: 50%;
+	height: 40%;
 	padding: 12px;
 }
 
 .preview-wrapper {
   flex: 1;
-  height: 50%;
+  height: 60%;
 }
 
 #code{
